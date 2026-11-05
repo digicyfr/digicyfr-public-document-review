@@ -95,7 +95,7 @@ final class DPDR_Admin {
 	}
 
 	/**
-	 * Source status based on saved scan timestamp and current post.
+	 * Source status based on saved scan fields and current post.
 	 *
 	 * @param array $row row input.
 	 */
@@ -104,7 +104,13 @@ final class DPDR_Admin {
 		if ( ! $post ) {
 			return 'deleted';
 		}
-		return 'publish' === $post->post_status && '' === $post->post_password && in_array( $post->post_type, array( 'post', 'page' ), true ) && $post->post_modified_gmt === $row['source_post_modified_gmt'] ? 'current' : 'stale';
+		return 'publish' === $post->post_status
+			&& '' === $post->post_password
+			&& in_array( $post->post_type, array( 'post', 'page' ), true )
+			&& $post->post_modified_gmt === $row['source_post_modified_gmt']
+			&& hash( 'sha256', $post->post_content ) === ( $row['source_post_content_sha256'] ?? '' )
+			&& $post->post_title === $row['source_title_at_scan']
+			&& (string) get_permalink( $post ) === $row['source_url_at_scan'] ? 'current' : 'stale';
 	}
 
 	/**

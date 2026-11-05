@@ -51,6 +51,12 @@ check( DPDR_Storage::transactional(), 'two InnoDB tables installed' );
 $admin = get_user_by( 'login', 'digicyfr_test_admin' );
 check( $admin instanceof WP_User, 'test admin' );
 wp_set_current_user( $admin->ID );
+global $wpdb;
+$links_table = DPDR_Storage::tables()['links'];
+check( false !== $wpdb->query( $wpdb->prepare( 'ALTER TABLE %i DROP COLUMN source_post_content_sha256', $links_table ) ), 'simulate previous local schema' );
+update_option( 'dpdr_schema_version', '0.1.0', false );
+DPDR_Storage::maybe_upgrade();
+check( '0.1.0-2' === get_option( 'dpdr_schema_version' ) && 'source_post_content_sha256' === $wpdb->get_var( $wpdb->prepare( 'SHOW COLUMNS FROM %i LIKE %s', $links_table, 'source_post_content_sha256' ) ), 'old schema gains content fingerprint column' );
 check( load_textdomain( 'digicyfr-public-document-review', WP_PLUGIN_DIR . '/digicyfr-public-document-review/languages/digicyfr-public-document-review-pl_PL.mo' ), 'bundled Polish catalog' );
 check( 'Przegląd dokumentów publicznych' === __( 'Public Document Review', 'digicyfr-public-document-review' ), 'Polish runtime label' );
 unload_textdomain( 'digicyfr-public-document-review' );
@@ -187,8 +193,14 @@ check( is_wp_error( DPDR_Admin::group_page( $second['run_id'], 'all', 1 ) ), 're
 remove_filter( 'query', $break_report );
 $wpdb->suppress_errors( $old_suppress );
 
-wp_update_post( array( 'ID' => $paragraph, 'post_content' => '<p>Edited</p>', 'post_modified' => '2028-01-01 00:00:00', 'post_modified_gmt' => '2028-01-01 00:00:00', 'edit_date' => true ) );
 $stored_paragraph = $wpdb->get_row( $wpdb->prepare( "SELECT * FROM {$tables['links']} WHERE run_id = %s AND source_post_id = %d", $second['run_id'], $paragraph ), ARRAY_A );
+check( hash( 'sha256', get_post( $paragraph )->post_content ) === $stored_paragraph['source_post_content_sha256'], 'stored source content fingerprint' );
+$before_edit = get_post( $paragraph );
+wp_update_post( array( 'ID' => $paragraph, 'post_content' => '<p>Edited</p>' ) );
+// Simulate two edits within WordPress's one-second timestamp resolution.
+check( false !== $wpdb->update( $wpdb->posts, array( 'post_modified' => $before_edit->post_modified, 'post_modified_gmt' => $stored_paragraph['source_post_modified_gmt'] ), array( 'ID' => $paragraph ) ), 'same-second timestamp fixture' );
+clean_post_cache( $paragraph );
+check( $stored_paragraph['source_post_modified_gmt'] === get_post( $paragraph )->post_modified_gmt && '<p>Edited</p>' === get_post( $paragraph )->post_content, 'source changed while timestamp stayed equal' );
 check( 'stale' === DPDR_Admin::source_status( $stored_paragraph ), 'edited source marked stale until rescan' );
 wp_delete_post( $paragraph, true );
 check( 'deleted' === DPDR_Admin::source_status( $stored_paragraph ), 'deleted source marked deleted' );

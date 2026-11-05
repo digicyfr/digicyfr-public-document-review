@@ -147,11 +147,12 @@ final class DPDR_Run {
 			return;
 		}
 		$source = array(
-			'run_id'                   => $run_id,
-			'source_post_id'           => $post_id,
-			'source_post_modified_gmt' => $post->post_modified_gmt,
-			'source_title_at_scan'     => $post->post_title,
-			'source_url_at_scan'       => (string) get_permalink( $post ),
+			'run_id'                     => $run_id,
+			'source_post_id'             => $post_id,
+			'source_post_modified_gmt'   => $post->post_modified_gmt,
+			'source_post_content_sha256' => hash( 'sha256', $post->post_content ),
+			'source_title_at_scan'       => $post->post_title,
+			'source_url_at_scan'         => (string) get_permalink( $post ),
 		);
 		foreach ( $rows as $row ) {
 			if ( false === $wpdb->insert( $table, array_merge( $source, $row ) ) ) {

@@ -4,7 +4,7 @@ This is the first free GPL-2.0-or-later release for manual ZIP installation. Sou
 
 ## Included
 
-Bounded manual scan of saved public PDF links, conservative Media Library matching, private attachment review state, and guarded complete-snapshot CSV.
+Bounded manual scan of saved public PDF links, conservative Media Library matching, private attachment review state, guarded complete-snapshot CSV, and same-second source-edit detection.
 
 ## Verification and compatibility
 

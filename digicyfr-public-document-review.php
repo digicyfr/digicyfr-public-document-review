@@ -30,4 +30,5 @@ require_once DIGICYFR_PUBLIC_DOCUMENT_REVIEW_PATH . 'includes/class-dpdr-review.
 require_once DIGICYFR_PUBLIC_DOCUMENT_REVIEW_PATH . 'includes/class-dpdr-admin.php';
 
 register_activation_hook( __FILE__, array( 'DPDR_Storage', 'install' ) );
+add_action( 'init', array( 'DPDR_Storage', 'maybe_upgrade' ) );
 DPDR_Admin::boot();

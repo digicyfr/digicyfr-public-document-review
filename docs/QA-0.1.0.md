@@ -3,7 +3,7 @@
 ## Candidate
 
 - ZIP: `dist/digicyfr-public-document-review-0.1.0.zip`
-- SHA-256: `39059c80a3acf1d39a6a00581eff56e92268acbb40de67ad79c42713b92a6b15`
+- SHA-256: `933b1366e53e50ff13b2490fac4266174968cfa890b0435dde591aabf776af78`
 - `tools/verify_zip.py --against-source`: all 15 allowlisted files match source byte for byte. Tests, compiler, release manifest and development docs are excluded.
 - Tested stack: WordPress 7.1, PHP 8.3.33, MariaDB 11.4.13, InnoDB plugin tables. These are the tested versions, not a claim about every newer version.
 
@@ -21,7 +21,7 @@
 
 ## Current artifact recheck and release limits
 
-On 2026-11-05, the rebuilt ZIP and SHA-256 sidecar matched the standalone and workspace packagers. This exact rebuilt ZIP passed install/activate/deactivate/reactivate and the complete WordPress integration fixture on the tested stack. Earlier browser and Plugin Check evidence is from a byte-different ZIP with identical runtime files.
+On 2026-11-05, the rebuilt ZIP and SHA-256 sidecar matched the standalone and workspace packagers. This exact rebuilt ZIP passed install/activate/deactivate/reactivate and the complete WordPress integration fixture on the tested stack. The fixture now tests upgrading the prior local table schema and detects a changed source whose WordPress modified timestamp remains equal to the scan timestamp. A previous GitHub main CI run exposed the same-second timestamp edge case; the new content fingerprint closes it. Earlier browser and Plugin Check evidence is from a byte-different ZIP with the same user interface and distribution headers; the fingerprint and schema migration were added afterward.
 
 - Only saved links in published, password-free post/page content are inventoried. The plugin does not read PDFs, test downloads, validate legal content, scan rendered theme output or dynamic builder data, send reminders, or alter files. A match means the saved URL equals the current filtered direct URL of a PDF attachment.
 - Scans use a high-water ID and read publication state at cursor time. They are not immutable snapshots. Later source changes require a new scan; changed/deleted rows are labelled in the saved report.

@@ -11,6 +11,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 /** Versioned private scan storage. */
 final class DPDR_Storage {
+	private const SCHEMA_VERSION = '0.1.0-2';
 	// The plugin owns these versioned custom tables and cannot cache engine checks.
 	// phpcs:disable WordPress.DB.DirectDatabaseQuery
 	/** Return fixed site-prefixed table names. */
@@ -51,6 +52,7 @@ final class DPDR_Storage {
 				run_id char(36) NOT NULL,
 				source_post_id bigint(20) unsigned NOT NULL,
 				source_post_modified_gmt datetime NOT NULL,
+				source_post_content_sha256 char(64) NOT NULL DEFAULT '',
 				source_title_at_scan text NOT NULL,
 				source_url_at_scan text NOT NULL,
 				href text NOT NULL,
@@ -71,7 +73,14 @@ final class DPDR_Storage {
 		if ( ! self::transactional() ) {
 			wp_die( esc_html__( 'Public Document Review requires InnoDB tables.', 'digicyfr-public-document-review' ) );
 		}
-		update_option( 'dpdr_schema_version', DIGICYFR_PUBLIC_DOCUMENT_REVIEW_VERSION, false );
+		update_option( 'dpdr_schema_version', self::SCHEMA_VERSION, false );
+	}
+
+	/** Upgrade an existing local candidate before it writes scan rows. */
+	public static function maybe_upgrade(): void {
+		if ( self::SCHEMA_VERSION !== get_option( 'dpdr_schema_version' ) ) {
+			self::install();
+		}
 	}
 
 	/** Require both tables to support rollback and row locking. */
