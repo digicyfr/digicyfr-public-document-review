@@ -5,6 +5,7 @@
 .dpdr-card small { font-weight: normal; }
 .dpdr-table-scroll { overflow-x: auto; max-width: 100%; }
 .dpdr-table-scroll table { min-width: 620px; }
+.dpdr-table-scroll th[scope="row"] a { text-decoration: underline; }
 .dpdr-url { overflow-wrap: anywhere; word-break: break-word; max-width: 320px; }
 .dpdr-review-form { display: flex; flex-wrap: wrap; gap: 0.8em; align-items: end; margin-top: 1em; }
 .dpdr-review-form label { display: flex; flex-direction: column; gap: 0.25em; max-width: 100%; }

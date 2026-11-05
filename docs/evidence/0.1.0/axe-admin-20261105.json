@@ -1,0 +1,264 @@
+{
+  "date": "2026-11-05",
+  "browser": "Chromium 156.0.8078.4",
+  "axeVersion": "4.10.3",
+  "zipSha256": "933b1366e53e50ff13b2490fac4266174968cfa890b0435dde591aabf776af78",
+  "baseline": {
+    "violations": [
+      {
+        "id": "link-in-text-block",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              "th[aria-label=\"Privacy Policy\"] > strong > .row-title"
+            ],
+            "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.3:1 with the surrounding text. (Minimum contrast is 3:1, link text: #3858e9, surrounding text: #50575e)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+          }
+        ]
+      }
+    ],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "nodes": [
+          {
+            "target": [
+              "#bulk-action-selector-top"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+          },
+          {
+            "target": [
+              "#filter-by-date"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+          },
+          {
+            "target": [
+              "#bulk-action-selector-bottom"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+          }
+        ]
+      },
+      {
+        "id": "th-has-data-cells",
+        "nodes": [
+          {
+            "target": [
+              ".wp-list-table"
+            ],
+            "summary": "Fix all of the following:\n  Table data cells are missing or empty"
+          }
+        ]
+      }
+    ],
+    "passes": 32
+  },
+  "scanFull": {
+    "violations": [
+      {
+        "id": "link-in-text-block",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              "th[scope=\"row\"] > a"
+            ],
+            "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.3:1 with the surrounding text. (Minimum contrast is 3:1, link text: #3858e9, surrounding text: #50575e)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+          }
+        ]
+      }
+    ],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "nodes": [
+          {
+            "target": [
+              "#dpdr-filter"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+          },
+          {
+            "target": [
+              "textarea"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+          }
+        ]
+      }
+    ],
+    "passes": 33
+  },
+  "scanLocal": {
+    "violations": [
+      {
+        "id": "link-in-text-block",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              "th[scope=\"row\"] > a"
+            ],
+            "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.3:1 with the surrounding text. (Minimum contrast is 3:1, link text: #3858e9, surrounding text: #50575e)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+          }
+        ]
+      }
+    ],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "nodes": [
+          {
+            "target": [
+              "#dpdr-filter"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+          },
+          {
+            "target": [
+              "textarea"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+          }
+        ]
+      }
+    ],
+    "passes": 20
+  },
+  "uncertainFull": {
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "nodes": [
+          {
+            "target": [
+              "#dpdr-filter"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+          }
+        ]
+      }
+    ],
+    "passes": 32
+  },
+  "uncertainLocal": {
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "nodes": [
+          {
+            "target": [
+              "#dpdr-filter"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+          }
+        ]
+      }
+    ],
+    "passes": 15
+  },
+  "mobileScan": {
+    "violations": [
+      {
+        "id": "link-in-text-block",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              "th[scope=\"row\"] > a"
+            ],
+            "summary": "Fix any of the following:\n  The link has insufficient color contrast of 1.3:1 with the surrounding text. (Minimum contrast is 3:1, link text: #3858e9, surrounding text: #50575e)\n  The link has no styling (such as underline) to distinguish it from the surrounding text"
+          }
+        ]
+      }
+    ],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "nodes": [
+          {
+            "target": [
+              "#dpdr-filter"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+          },
+          {
+            "target": [
+              "textarea"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+          },
+          {
+            "target": [
+              "input[value=\"Export complete inventory CSV\"]"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+          }
+        ]
+      }
+    ],
+    "passes": 18
+  },
+  "mobileUncertain": {
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "nodes": [
+          {
+            "target": [
+              "#dpdr-filter"
+            ],
+            "summary": "Fix any of the following:\n  Element's background color could not be determined due to a background image"
+          }
+        ]
+      }
+    ],
+    "passes": 16
+  },
+  "focusTab": {
+    "tag": "INPUT",
+    "type": "date",
+    "name": "due",
+    "outline": "solid",
+    "width": "2px"
+  },
+  "axNames": [
+    {
+      "role": "checkbox",
+      "name": "Mark reviewed without a next date (Unscheduled)"
+    },
+    {
+      "role": "button",
+      "name": "Save review details"
+    },
+    {
+      "role": "button",
+      "name": "Mark reviewed"
+    },
+    {
+      "role": "spinbutton",
+      "name": "Owner user ID (0 for none)"
+    },
+    {
+      "role": "textbox",
+      "name": "Private note (500 characters maximum)"
+    }
+  ],
+  "mobileReview": {
+    "viewport": 390,
+    "document": 390,
+    "table": 620,
+    "container": 340
+  },
+  "mobileUncertainDimensions": {
+    "viewport": 390,
+    "document": 390
+  },
+  "errors": []
+}
