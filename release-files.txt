@@ -1,0 +1,15 @@
+digicyfr-public-document-review.php
+includes/class-dpdr-storage.php
+includes/class-dpdr-scanner.php
+includes/class-dpdr-run.php
+includes/class-dpdr-review.php
+includes/class-dpdr-admin.php
+assets/admin.js
+assets/admin.css
+languages/digicyfr-public-document-review-pl_PL.po
+languages/digicyfr-public-document-review-pl_PL.mo
+README.md
+readme.txt
+CHANGELOG.md
+LICENSE
+uninstall.php

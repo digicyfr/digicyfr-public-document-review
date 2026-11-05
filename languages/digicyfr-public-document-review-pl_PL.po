@@ -1,0 +1,343 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Digicyfr Public Document Review 0.1.0\n"
+"Language: pl_PL\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n==1 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+
+msgid "50,000 stored links limit reached"
+msgstr "Osiągnięto limit 50 000 zapisanych odnośników"
+
+msgid "A complete CSV could not be generated. Retry later."
+msgstr "Nie można utworzyć kompletnego pliku CSV. Spróbuj ponownie później."
+
+msgid "A link exceeds 2048 bytes"
+msgstr "Odnośnik przekracza 2048 bajtów"
+
+msgid "A private inventory of published PDF links with attachment review dates and owners."
+msgstr "Prywatny wykaz opublikowanych odnośników PDF z terminami przeglądu i osobami odpowiedzialnymi."
+
+msgid "Action failed. Check the form and permissions."
+msgstr "Działanie nie powiodło się. Sprawdź formularz i uprawnienia."
+
+msgid "Action saved."
+msgstr "Działanie zapisano."
+
+msgid "After marking reviewed, choose a future date or explicitly select Unscheduled."
+msgstr "Po oznaczeniu przeglądu wybierz przyszłą datę albo wyraźnie zaznacz brak terminu."
+
+msgid "All matched PDFs"
+msgstr "Wszystkie dopasowane pliki PDF"
+
+msgid "Ambiguous attachment hints"
+msgstr "Niejednoznaczne wskazówki dotyczące załącznika"
+
+msgid "Another scan action is in progress."
+msgstr "Trwa inne działanie skanu."
+
+msgid "Apply filter"
+msgstr "Zastosuj filtr"
+
+msgid "Block nesting exceeds the safety limit"
+msgstr "Zagnieżdżenie bloków przekracza limit bezpieczeństwa"
+
+msgid "Cancel scan"
+msgstr "Anuluj skan"
+
+msgid "Cancelled scan"
+msgstr "Skan anulowany"
+
+msgid "Changed source — rescan needed"
+msgstr "Zmienione źródło — wymagany ponowny skan"
+
+msgid "Clear the date before selecting Unscheduled."
+msgstr "Usuń datę przed zaznaczeniem braku terminu."
+
+msgid "Complete scan"
+msgstr "Skan kompletny"
+
+msgid "Completed UTC:"
+msgstr "Ukończono (UTC):"
+
+msgid "Continue one batch"
+msgstr "Kontynuuj jedną partię"
+
+msgid "Could not begin a safe scan transaction."
+msgstr "Nie można rozpocząć bezpiecznej transakcji skanu."
+
+msgid "Could not cancel the scan."
+msgstr "Nie można anulować skanu."
+
+msgid "Could not create the scan."
+msgstr "Nie można utworzyć skanu."
+
+msgid "Could not read PDF references."
+msgstr "Nie można odczytać odnośników do PDF."
+
+msgid "Could not read eligible posts."
+msgstr "Nie można odczytać kwalifikujących się wpisów."
+
+msgid "Could not read scan state."
+msgstr "Nie można odczytać stanu skanu."
+
+msgid "Could not read the complete inventory."
+msgstr "Nie można odczytać kompletnego wykazu."
+
+msgid "Could not read the inventory."
+msgstr "Nie można odczytać wykazu."
+
+msgid "Could not read the saved inventory. Retry later."
+msgstr "Nie można odczytać zapisanego wykazu. Spróbuj ponownie później."
+
+msgid "Could not read uncertain links."
+msgstr "Nie można odczytać niepewnych odnośników."
+
+msgid "Coverage reason:"
+msgstr "Powód niepełnego zakresu:"
+
+msgid "Current source"
+msgstr "Aktualne źródło"
+
+msgid "Deleted source"
+msgstr "Usunięte źródło"
+
+msgid "Due today"
+msgstr "Termin dzisiaj"
+
+msgid "Enter a real date in YYYY-MM-DD format."
+msgstr "Podaj rzeczywistą datę w formacie RRRR-MM-DD."
+
+msgid "Enter a valid owner user ID."
+msgstr "Podaj poprawny identyfikator użytkownika odpowiedzialnego."
+
+msgid "Export complete inventory CSV"
+msgstr "Eksportuj kompletny wykaz do CSV"
+
+msgid "File block ID hints"
+msgstr "Identyfikatory wskazane przez blok Plik"
+
+msgid "Finish or cancel the current scan first."
+msgstr "Najpierw zakończ lub anuluj bieżący skan."
+
+msgid "Former user #%d"
+msgstr "Były użytkownik #%d"
+
+msgid "ID cursor / high-water:"
+msgstr "Kursor ID / górna granica:"
+
+msgid "Incomplete scan"
+msgstr "Skan niekompletny"
+
+msgid "Indirect attachment page link"
+msgstr "Pośredni odnośnik do strony załącznika"
+
+msgid "Inventory filter"
+msgstr "Filtr wykazu"
+
+msgid "Latest complete inventory"
+msgstr "Ostatni kompletny wykaz"
+
+msgid "Latest scan"
+msgstr "Ostatni skan"
+
+msgid "Links:"
+msgstr "Odnośniki:"
+
+msgid "Mark reviewed"
+msgstr "Oznacz jako przejrzane"
+
+msgid "Mark reviewed without a next date (Unscheduled)"
+msgstr "Oznacz jako przejrzane bez kolejnego terminu"
+
+msgid "Match state"
+msgstr "Stan dopasowania"
+
+msgid "Matched PDF attachment"
+msgstr "Dopasowany załącznik PDF"
+
+msgid "More references exist in this snapshot and CSV."
+msgstr "Więcej odnośników znajduje się w tym wykazie i pliku CSV."
+
+msgid "More than 10 competing File block IDs"
+msgstr "Ponad 10 konkurujących identyfikatorów bloku Plik"
+
+msgid "More than 300 saved links in one source"
+msgstr "Ponad 300 zapisanych odnośników w jednym źródle"
+
+msgid "Next page"
+msgstr "Następna strona"
+
+msgid "Next review date (site local)"
+msgstr "Data kolejnego przeglądu (czas witryny)"
+
+msgid "Next review:"
+msgstr "Kolejny przegląd:"
+
+msgid "No complete inventory is available yet."
+msgstr "Kompletny wykaz nie jest jeszcze dostępny."
+
+msgid "No matched PDFs in this filter. The inventory does not certify document validity."
+msgstr "Brak dopasowanych PDF w tym filtrze. Wykaz nie potwierdza ważności dokumentów."
+
+msgid "No scan"
+msgstr "Brak skanu"
+
+msgid "No uncertain PDF links in this complete snapshot."
+msgstr "Brak niepewnych odnośników do PDF w tym kompletnym wykazie."
+
+msgid "None"
+msgstr "Brak"
+
+msgid "Occurrences"
+msgstr "Wystąpienia"
+
+msgid "Only administrators can scan or export."
+msgstr "Tylko administratorzy mogą skanować i eksportować."
+
+msgid "Open source"
+msgstr "Otwórz źródło"
+
+msgid "Overdue"
+msgstr "Po terminie"
+
+msgid "Owner user ID (0 for none)"
+msgstr "ID użytkownika odpowiedzialnego (0 oznacza brak)"
+
+msgid "Owner:"
+msgstr "Osoba odpowiedzialna:"
+
+msgid "PDF Reviews"
+msgstr "Przeglądy PDF"
+
+msgid "PDF link"
+msgstr "Odnośnik PDF"
+
+msgid "Previous page"
+msgstr "Poprzednia strona"
+
+msgid "Private note (500 characters maximum)"
+msgstr "Prywatna notatka (maksymalnie 500 znaków)"
+
+msgid "Public Document Review"
+msgstr "Przegląd dokumentów publicznych"
+
+msgid "Public Document Review requires InnoDB tables."
+msgstr "Przegląd dokumentów publicznych wymaga tabel InnoDB."
+
+msgid "Queued"
+msgstr "W kolejce"
+
+msgid "Save review details"
+msgstr "Zapisz szczegóły przeglądu"
+
+msgid "Saved content could not be parsed"
+msgstr "Nie można przeanalizować zapisanej treści"
+
+msgid "Scan in progress"
+msgstr "Skan w toku"
+
+msgid "Scan storage could not be read; the previous report pointer was retained."
+msgstr "Nie można odczytać danych skanu; odwołanie do poprzedniego raportu zachowano."
+
+msgid "Scan storage or source error"
+msgstr "Błąd danych skanu lub źródła"
+
+msgid "Scan tables must use InnoDB."
+msgstr "Tabele skanu muszą używać InnoDB."
+
+msgid "Scanned:"
+msgstr "Przeskanowano:"
+
+msgid "Skipped:"
+msgstr "Pominięto:"
+
+msgid "Source changed during the scan"
+msgstr "Źródło zmieniło się podczas skanu"
+
+msgid "Source content exceeds 1 MiB"
+msgstr "Treść źródła przekracza 1 MiB"
+
+msgid "Source page"
+msgstr "Strona źródłowa"
+
+msgid "Source status"
+msgstr "Stan źródła"
+
+msgid "Start a new scan"
+msgstr "Rozpocznij nowy skan"
+
+msgid "Started UTC:"
+msgstr "Rozpoczęto (UTC):"
+
+msgid "The 50,000-link limit stopped this scan; later source IDs were not scanned."
+msgstr "Limit 50 000 odnośników zatrzymał skan; późniejszych identyfikatorów źródeł nie przeskanowano."
+
+msgid "The note must be plain text of at most 500 characters."
+msgstr "Notatka musi być zwykłym tekstem o długości najwyżej 500 znaków."
+
+msgid "The review could not be saved; previous values were restored."
+msgstr "Nie można zapisać przeglądu; przywrócono poprzednie wartości."
+
+msgid "The scan is incomplete. The previous complete report remains available."
+msgstr "Skan jest niekompletny. Poprzedni kompletny raport pozostaje dostępny."
+
+msgid "The selected owner cannot edit this attachment."
+msgstr "Wybrana osoba nie może edytować tego załącznika."
+
+msgid "This is a saved snapshot; source edits and new uploads require a rescan."
+msgstr "To zapisany stan; zmiany źródeł i nowe pliki wymagają ponownego skanu."
+
+msgid "This private inventory checks saved PDF links in public posts and pages. It does not read PDFs, check download availability or legal validity, send reminders, or change files."
+msgstr "Ten prywatny wykaz sprawdza zapisane odnośniki do PDF w publicznych wpisach i stronach. Nie czyta plików PDF, nie sprawdza ich dostępności ani ważności prawnej, nie wysyła przypomnień i nie zmienia plików."
+
+msgid "This scan is in progress or incomplete. Its rows cannot be exported as a complete inventory."
+msgstr "Skan trwa lub jest niekompletny. Jego wierszy nie można eksportować jako kompletnego wykazu."
+
+msgid "This scan is no longer running."
+msgstr "Ten skan już nie trwa."
+
+msgid "Uncertain link"
+msgstr "Niepewny odnośnik"
+
+msgid "Uncertain links"
+msgstr "Niepewne odnośniki"
+
+msgid "Uncertain links are visible to administrators."
+msgstr "Niepewne odnośniki są widoczne dla administratorów."
+
+msgid "Uncertain: changed or offloaded URL"
+msgstr "Niepewny: zmieniony adres lub plik poza serwerem"
+
+msgid "Unknown action."
+msgstr "Nieznane działanie."
+
+msgid "Unknown review action."
+msgstr "Nieznane działanie przeglądu."
+
+msgid "Unmatched external PDF link"
+msgstr "Niedopasowany zewnętrzny odnośnik PDF"
+
+msgid "Unmatched local PDF link"
+msgstr "Niedopasowany lokalny odnośnik PDF"
+
+msgid "Unscheduled"
+msgstr "Bez terminu"
+
+msgid "Upcoming"
+msgstr "Nadchodzący"
+
+msgid "You cannot cancel this scan."
+msgstr "Nie możesz anulować tego skanu."
+
+msgid "You cannot continue this scan."
+msgstr "Nie możesz kontynuować tego skanu."
+
+msgid "You cannot review this PDF attachment."
+msgstr "Nie możesz przeglądać tego załącznika PDF."
+
+msgid "You cannot start a document scan."
+msgstr "Nie możesz rozpocząć skanu dokumentów."
+
+msgid "You cannot view PDF reviews."
+msgstr "Nie możesz wyświetlać przeglądów PDF."

@@ -1,0 +1,19 @@
+.dpdr-wrap { max-width: 1100px; }
+.dpdr-wrap .dpdr-inline { padding: 0.7em 1em; }
+.dpdr-card { border: 1px solid #c3c4c7; background: #fff; margin: 1.2em 0; padding: 1em; }
+.dpdr-card h3 { overflow-wrap: anywhere; }
+.dpdr-card small { font-weight: normal; }
+.dpdr-table-scroll { overflow-x: auto; max-width: 100%; }
+.dpdr-table-scroll table { min-width: 620px; }
+.dpdr-url { overflow-wrap: anywhere; word-break: break-word; max-width: 320px; }
+.dpdr-review-form { display: flex; flex-wrap: wrap; gap: 0.8em; align-items: end; margin-top: 1em; }
+.dpdr-review-form label { display: flex; flex-direction: column; gap: 0.25em; max-width: 100%; }
+.dpdr-review-form label:has(input[type="checkbox"]) { flex-direction: row; align-items: center; }
+.dpdr-review-form input[type="number"], .dpdr-review-form input[type="date"], .dpdr-review-form textarea { box-sizing: border-box; width: 100%; max-width: 100%; }
+.dpdr-review-form textarea { min-width: min(320px, 80vw); }
+.dpdr-review-form :focus-visible, .dpdr-wrap a:focus-visible, .dpdr-wrap button:focus-visible { outline: 2px solid #135e96; outline-offset: 2px; }
+@media (max-width: 600px) {
+	.dpdr-review-form { display: block; }
+	.dpdr-review-form label, .dpdr-review-form button { margin: 0.6em 0; }
+	.dpdr-review-form textarea { min-width: 0; }
+}
