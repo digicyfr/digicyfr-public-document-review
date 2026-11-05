@@ -46,7 +46,7 @@ function finish( string $id, int $limit = 10 ): array {
 }
 
 $plugin = 'digicyfr-public-document-review/digicyfr-public-document-review.php';
-check( is_plugin_active( $plugin ) && '0.1.0' === DIGICYFR_PUBLIC_DOCUMENT_REVIEW_VERSION, 'exact ZIP active/version' );
+check( is_plugin_active( $plugin ) && '0.1.1' === DIGICYFR_PUBLIC_DOCUMENT_REVIEW_VERSION, 'exact ZIP active/version' );
 check( DPDR_Storage::transactional(), 'two InnoDB tables installed' );
 $admin = get_user_by( 'login', 'digicyfr_test_admin' );
 check( $admin instanceof WP_User, 'test admin' );

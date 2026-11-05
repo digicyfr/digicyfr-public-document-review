@@ -6,9 +6,9 @@ Changes should preserve the plugin's free GPL-2.0-or-later license, English and 
 
 ```bash
 python3 scripts/release.py
-python3 scripts/release.py --verify dist/digicyfr-public-document-review-0.1.0.zip
-(cd dist && sha256sum -c digicyfr-public-document-review-0.1.0.zip.sha256)
-bash tests/run-wordpress-integration.sh dist/digicyfr-public-document-review-0.1.0.zip
+python3 scripts/release.py --verify dist/digicyfr-public-document-review-0.1.1.zip
+(cd dist && sha256sum -c digicyfr-public-document-review-0.1.1.zip.sha256)
+bash tests/run-wordpress-integration.sh dist/digicyfr-public-document-review-0.1.1.zip
 ```
 
-The integration script uses Docker Compose and removes its disposable volumes. CI lints PHP/JS, builds and verifies the ZIP, then runs the WordPress integration fixture. The `release-files.txt` allowlist determines what is published. Update the main plugin version, `readme.txt` stable tag and `CHANGELOG.md` together for a new release. A release branch such as `release/0.1.0` represents the reviewed source for that version; attach the resulting ZIP and SHA-256 sidecar to the matching GitHub release after CI passes.
+The integration script uses Docker Compose and removes its disposable volumes. CI lints PHP/JS, builds and verifies the ZIP, then runs the WordPress integration fixture. The `release-files.txt` allowlist determines what is published. Update the main plugin version, `readme.txt` stable tag and `CHANGELOG.md` together for a new release. A release branch such as `release/0.1.1` represents the reviewed source for that version; attach the resulting ZIP and SHA-256 sidecar to the matching GitHub release after CI passes.

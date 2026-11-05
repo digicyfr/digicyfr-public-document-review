@@ -4,7 +4,7 @@ Tags: pdf, documents, editorial, accessibility
 Requires at least: 7.1
 Requires PHP: 8.3
 Tested up to: 7.1
-Stable tag: 0.1.0
+Stable tag: 0.1.1
 License: GPL-2.0-or-later
 License URI: https://www.gnu.org/licenses/old-licenses/gpl-2.0.html
 
@@ -31,6 +31,10 @@ No. A match proves only that a saved link equals the current filtered URL of an 
 Both plugin-owned tables, options, and all five protected attachment review meta keys are removed. Deactivation retains them.
 
 == Changelog ==
+
+= 0.1.1 =
+
+Underline matched-report source links so they remain identifiable without color.
 
 = 0.1.0 =
 

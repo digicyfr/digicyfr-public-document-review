@@ -26,15 +26,15 @@ jobs:
         run: |
           set -euo pipefail
           python3 scripts/release.py
-          python3 scripts/release.py --verify dist/digicyfr-public-document-review-0.1.0.zip
-          (cd dist && sha256sum -c digicyfr-public-document-review-0.1.0.zip.sha256)
+          python3 scripts/release.py --verify dist/digicyfr-public-document-review-0.1.1.zip
+          (cd dist && sha256sum -c digicyfr-public-document-review-0.1.1.zip.sha256)
       - name: WordPress integration
-        run: bash tests/run-wordpress-integration.sh dist/digicyfr-public-document-review-0.1.0.zip
+        run: bash tests/run-wordpress-integration.sh dist/digicyfr-public-document-review-0.1.1.zip
       - name: Upload checked ZIP
         uses: actions/upload-artifact@v4
         with:
           name: digicyfr-public-document-review-candidate
           path: |
-            dist/digicyfr-public-document-review-0.1.0.zip
-            dist/digicyfr-public-document-review-0.1.0.zip.sha256
+            dist/digicyfr-public-document-review-0.1.1.zip
+            dist/digicyfr-public-document-review-0.1.1.zip.sha256
           if-no-files-found: ignore

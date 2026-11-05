@@ -4,7 +4,7 @@ A free GPL WordPress plugin that inventories PDF links already saved in publishe
 
 ## Install and use
 
-Upload the 0.1.0 ZIP at **Plugins → Add New → Upload Plugin**. Tested with WordPress 7.1, PHP 8.3.33 and MariaDB 11.4.13 using InnoDB. The plugin requires WordPress 7.1+, PHP 8.3+, and InnoDB for its two site-prefixed tables.
+Upload the 0.1.1 ZIP at **Plugins → Add New → Upload Plugin**. Tested with WordPress 7.1, PHP 8.3.33 and MariaDB 11.4.13 using InnoDB. The plugin requires WordPress 7.1+, PHP 8.3+, and InnoDB for its two site-prefixed tables.
 
 1. Open **PDF Reviews** in the WordPress admin. An administrator starts a scan and presses **Continue one batch** until it is complete. Each request handles at most 25 public posts/pages. You may leave the page and resume later; **Cancel scan** preserves the previous complete snapshot.
 2. The complete inventory groups proven PDF attachments by Media Library item and lists their referencing pages. Filter by Due today, Overdue, Upcoming, or Unscheduled. Administrators can inspect an **Uncertain links** filter with mismatched File block IDs, attachment-page links, unproven local/external URLs, and competing hints. These rows never gain review controls.
@@ -25,7 +25,7 @@ One Continue request handles at most 25 posts. A source over 1 MiB, more than 30
 
 Two site-prefixed InnoDB tables store run state and link rows; a non-autoloaded option mirrors scan state and a second option points to the active complete run. Review state is protected attachment metadata (`_dpdr_owner_id`, `_dpdr_due`, `_dpdr_note`, `_dpdr_reviewed_at_utc`, `_dpdr_reviewed_by`). Administrators see uncertain links; editors see only matched attachments they can edit. Scan actions, review saves, and CSV use WordPress nonces and capability checks. Deactivation retains data; **uninstall removes both tables, options, and all five review meta keys permanently**. Export a needed report first.
 
-Version 0.1.0 is a manual ZIP update from Digicyfr; the unique `Update URI` prevents an unrelated directory update. No automatic update endpoint exists yet.
+Version 0.1.1 is a manual ZIP update from Digicyfr; the unique `Update URI` prevents an unrelated directory update. No automatic update endpoint exists yet.
 
 Source: [github.com/digicyfr/digicyfr-public-document-review](https://github.com/digicyfr/digicyfr-public-document-review). For ordinary support use [Issues](https://github.com/digicyfr/digicyfr-public-document-review/issues); for vulnerabilities use [private security reporting](SECURITY.md).
 
@@ -35,9 +35,9 @@ From the repository root:
 
 ```bash
 python3 scripts/release.py
-python3 scripts/release.py --verify dist/digicyfr-public-document-review-0.1.0.zip
-(cd dist && sha256sum -c digicyfr-public-document-review-0.1.0.zip.sha256)
-bash tests/run-wordpress-integration.sh dist/digicyfr-public-document-review-0.1.0.zip
+python3 scripts/release.py --verify dist/digicyfr-public-document-review-0.1.1.zip
+(cd dist && sha256sum -c digicyfr-public-document-review-0.1.1.zip.sha256)
+bash tests/run-wordpress-integration.sh dist/digicyfr-public-document-review-0.1.1.zip
 ```
 
 License: GPL-2.0-or-later; see [LICENSE](LICENSE).

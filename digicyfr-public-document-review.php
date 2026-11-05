@@ -2,7 +2,7 @@
 /**
  * Plugin Name: Digicyfr Public Document Review
  * Description: A private inventory of published PDF links with attachment review dates and owners.
- * Version: 0.1.0
+ * Version: 0.1.1
  * Requires at least: 7.1
  * Requires PHP: 8.3
  * Author: Digicyfr
@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'DIGICYFR_PUBLIC_DOCUMENT_REVIEW_VERSION', '0.1.0' );
+define( 'DIGICYFR_PUBLIC_DOCUMENT_REVIEW_VERSION', '0.1.1' );
 define( 'DIGICYFR_PUBLIC_DOCUMENT_REVIEW_PATH', plugin_dir_path( __FILE__ ) );
 define( 'DIGICYFR_PUBLIC_DOCUMENT_REVIEW_URL', plugin_dir_url( __FILE__ ) );
 

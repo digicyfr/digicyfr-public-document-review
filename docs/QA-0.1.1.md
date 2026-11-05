@@ -1,0 +1,11 @@
+# Public Document Review 0.1.1 release QA
+
+Date: 5 November 2026. This version fixes the matched-report link cue issue documented for the immutable [0.1.0 release](QA-0.1.0.md).
+
+- Artifact: `digicyfr-public-document-review-0.1.1.zip`, 15 allowlisted files, SHA-256 `bfe2a984ed484cef43d2810daf0cc4ca8977e95b6428833247645cf48905c47f`. `scripts/release.py --verify` matched the ZIP to the manifest and source; the generated checksum sidecar passed `sha256sum -c`.
+- The exact ZIP installed, activated, deactivated and reactivated on a disposable WordPress 7.1, PHP 8.3.33, MariaDB 11.4.13/InnoDB site. The integration fixture passed a 26-post two-batch scan, permissions, CSV, source-change and uninstall checks. The persistent schema version remains `0.1.0-2`; this CSS-only fix needs no table migration.
+- A synthetic Media Library PDF, published source page and unmatched external PDF link populated a fresh browser fixture. Playwright Chromium completed the two-batch scan. Axe-core 4.10.3 checked the full matched and uncertain report pages and the plugin region at desktop and 390px against WCAG 2 A/AA, 2.1 A/AA and 2.2 AA tags: zero definite violations. The matched **Open source** link had computed `text-decoration-line: underline` and the targeted `link-in-text-block` rule had zero violations or incomplete items. [Full axe evidence](evidence/0.1.1/axe-admin-20261105.json) · [targeted link result](evidence/0.1.1/axe-source-link.json).
+- At 390px, the document width was 390px. The wide report table scrolled within its 340px container. Keyboard focus and accessibility-tree names for review controls were checked; no browser script error occurred. [Matched report](evidence/0.1.1/a11y-review-390px.png) · [uncertain links](evidence/0.1.1/a11y-uncertain-390px.png).
+- Axe could not finish some native-control color-contrast checks, recorded as inconclusive. The wider v0.1.0 QA covers owner/date save, guarded CSV and same-second stale-source flow; v0.1.1 changed only the report link CSS and version/documentation.
+
+The test used synthetic data on a local disposable site. A human screen-reader session, multisite, customer content and offloaded PDF storage have not been tested. Browser and axe results do not establish WCAG conformance of the plugin or host site.
