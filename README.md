@@ -2,6 +2,16 @@
 
 A free GPL WordPress plugin that inventories PDF links already saved in published posts and pages. It links a proven Media Library PDF to its public source pages and gives staff a private owner, next-review date, and note. It does **not** read a PDF, verify its legal validity, test download availability, replace a file, send email, or add public output.
 
+## Website guides and stable release
+
+- [Public Document Review: English overview and installation](https://www.digicyfr.com/en/wordpress-plugins/digicyfr-public-document-review)
+- [Przegląd publicznych dokumentów: opis i instalacja po polsku](https://www.digicyfr.com/pl/wordpress-plugins/digicyfr-public-document-review)
+- [Stable v0.1.1 release, ZIP and checksum](https://github.com/digicyfr/digicyfr-public-document-review/releases/tag/v0.1.1)
+
+<a href="https://www.digicyfr.com/en/wordpress-plugins/digicyfr-public-document-review"><img src="https://www.digicyfr.com/images/wordpress-plugins/digicyfr-public-document-review.png" alt="Mobile PDF review report with matched source links" width="260"></a>
+
+_Example screenshot from a disposable test site._
+
 ## Install and use
 
 Upload the 0.1.1 ZIP at **Plugins → Add New → Upload Plugin**. Tested with WordPress 7.1, PHP 8.3.33 and MariaDB 11.4.13 using InnoDB. The plugin requires WordPress 7.1+, PHP 8.3+, and InnoDB for its two site-prefixed tables.
