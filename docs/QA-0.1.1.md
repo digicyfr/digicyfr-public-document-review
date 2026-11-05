@@ -9,3 +9,5 @@ Date: 5 November 2026. This version fixes the matched-report link cue issue docu
 - Axe could not finish some native-control color-contrast checks, recorded as inconclusive. The wider v0.1.0 QA covers owner/date save, guarded CSV and same-second stale-source flow; v0.1.1 changed only the report link CSS and version/documentation.
 
 The test used synthetic data on a local disposable site. A human screen-reader session, multisite, customer content and offloaded PDF storage have not been tested. Browser and axe results do not establish WCAG conformance of the plugin or host site.
+
+The published GitHub `v0.1.1` ZIP and checksum sidecar were downloaded without authentication. The sidecar verified, and the downloaded ZIP was byte-identical to the browser-tested local ZIP. The protected `release/0.1.1` branch and annotated tag resolve to commit `20359bda1b5a3c137bc0dc5a33ce4c2ae39f4e59`; main and release-branch CI passed. The GitHub release is stable for self-hosted manual ZIP installation with the limits above disclosed.
